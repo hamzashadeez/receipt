@@ -27,10 +27,9 @@ function Home() {
           <button className="btn btn-primary" onClick={()=> setShow(true)}>Register</button>
         </div>
         <div className="text-container">
-          <h1>Simple tool to make Payment, and print reciept </h1>
+          <h1>Automatic Receipt Generating System </h1>
           <p>
-            Sign up and start making successful transactions, we provide better
-            options users
+            A case study of National Association of Computer Science
           </p>
           <button className="btn btn-primary"  onClick={()=> setShow(true)}>Join Now</button>
         </div>
