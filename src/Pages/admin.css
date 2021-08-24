@@ -1,0 +1,26 @@
+.admin__main_div{
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.admin__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.admin__header > h3{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.list__payments{
+    display: flex;
+    flex-wrap: wrap;
+}

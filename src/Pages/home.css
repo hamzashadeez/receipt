@@ -1,0 +1,138 @@
+.hero__section {
+  background-color: teal;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.header_hero {
+  position: absolute;
+  top: 15px;
+  width: 94%;
+  left: 3%;
+  z-index: 10;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1.1px;
+  font-size: 1.4rem;
+}
+
+.text-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+.text-container > h1 {
+  color: white;
+  font-size: 3rem;
+  max-width: 740px;
+  letter-spacing: 2px;
+}
+
+.text-container > p {
+  color: white;
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 35px 0;
+}
+
+.text-container > button {
+  width: 140px;
+}
+
+/* About Section */
+.about {
+  width: 100%;
+}
+.about > h3 {
+  text-align: center;
+}
+
+.about__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.admin {
+  background-color: whitesmoke;
+  padding: 20px 0;
+}
+.admin__div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__div > img {
+  object-fit: contain;
+  width: 300px;
+}
+
+.about__div > p {
+  max-width: 400px;
+  margin-left: 50px;
+  font-size: 1.2rem;
+}
+.admin__div > p {
+  max-width: 400px;
+  margin-right: 50px;
+  font-size: 1.2rem;
+}
+
+/* responsiveness */
+@media screen and (max-width: 700px) {
+  .about__div {
+    flex-direction: column;
+  }
+  .admin__div {
+    flex-direction: column;
+  }
+
+  .about__div > p {
+    max-width: 400px;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+  }
+
+  .text-container {
+    padding: 0 25px;
+  }
+
+  .text-container > h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    max-width: 350px;
+  }
+  .text-container > p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    max-width: 350px;
+  }
+
+  .text-container > button {
+    width: 100px;
+  }
+
+  .admin__div > p{
+    text-align: center;
+    margin: 0;
+    margin: 30px 0;
+  }
+}
