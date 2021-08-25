@@ -9,8 +9,8 @@ function Box({data}) {
           <img src={person} />
       </div>
       <div className="box_data mx-3">
-        <h5>{data?.name}</h5>
-        <p className='text-muted mb-1'>{data?.email}</p>
+        <h6>{data?.name}</h6>
+        <p className='text-muted mb-1 email__'>{data?.email}</p>
         {/* <div className='money_container'> */}
           <h3 className=" p-3">N500</h3>
         {/* </div> */}

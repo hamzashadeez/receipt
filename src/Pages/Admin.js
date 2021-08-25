@@ -11,7 +11,7 @@ function Admin() {
   useEffect(() => {
     let unsubscribe;
 
-    unsubscribe = db.collection("PaymentList").onSnapshot((snapshot) => {
+    unsubscribe = db.collection("PaymentList").orderBy("timestamp", "desc").onSnapshot((snapshot) => {
       setList(
         snapshot.docs.map((doc) => ({
           id: doc.id,

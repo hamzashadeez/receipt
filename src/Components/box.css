@@ -1,49 +1,60 @@
-.box{
-    background-color: white;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
+.box {
+  background-color: white;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }
-
 
 .box_data {
-    flex: 1
+  flex: 1;
 }
 
-.box_data > h3{
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 1.7rem;
-    color: #3498DB;
+.box_data > h6 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+.email__{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+.box_data > h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 1.4rem;
+  color: #3498db;
 }
 
-.money_container{
-    background-color: rgb(199, 232, 247);
-    padding: 0;
-    height: 44px;
-    border-radius: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.money_container {
+  background-color: rgb(199, 232, 247);
+  padding: 0;
+  height: 44px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.icon-container{
-    background-color: rgb(199, 232, 247);
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
+.icon-container {
+  background-color: rgb(199, 232, 247);
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
 }
 
-.icon-container > img{
-    object-fit: contain;
-    width: 30px;
+.icon-container > img {
+  object-fit: contain;
+  width: 30px;
 }
 
-.date{
-    height: 100%;
+.date {
+  height: 100%;
 }

@@ -62,3 +62,10 @@
     height: 35vh;
     width: 100%;
 }
+
+
+@media screen and (max-length: 400px) {
+  .payment__header > h3 {
+    font-size: 0.9rem;
+  }
+}

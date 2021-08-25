@@ -7,6 +7,8 @@ import { db, auth } from "../Configs/firebase";
 import { v4 as uuidv4 } from "uuid";
 import moment from 'moment'
 import { useHistory } from "react-router-dom";
+import Receipt from "../Modals/Receipt";
+import firebase from 'firebase'
 
 function Payment() {
 
@@ -14,6 +16,8 @@ function Payment() {
   const [user, setUser] = useRecoilState(userState);
   const [cardNumber, setCardNumber] = useState("");
   const [cardName, setCardName] = useState("");
+  const [receiptData, setRecieptData] = useState({});
+  const [show, setShow] = useState(false)
 
   const logmeout = async () => {
     await auth.signOut().then(() => {
@@ -28,6 +32,10 @@ function Payment() {
     }
   },[])
 
+  const hideShow = ()=>{
+    setShow(false)
+  }
+
 
   const payit = async (e) => {
     e.preventDefault()
@@ -37,14 +45,18 @@ function Payment() {
       amount: 500,
       cardNumber,
       cardName,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       date: moment().format("DD/MM/YYYY"),
     };
+    setRecieptData(data);
+    setShow(true);
     await db
       .collection("PaymentList")
       .doc(uuidv4())
       .set(data)
       .then(() => {
-        alert("successful");
+        setRecieptData(data);
+        setShow(true);
         setCardNumber("")
         setCardName("")
       }).catch((e)=>{
@@ -54,6 +66,7 @@ function Payment() {
 
   return (
     <div className="payment__main_div">
+      <Receipt show={show} onHide={()=> hideShow()} data={receiptData} />
       <div className="payment__header shadow-sm">
         <h3>Make Payment</h3>
         <h6>{user?.name}</h6>
