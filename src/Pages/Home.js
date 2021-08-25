@@ -24,14 +24,15 @@ function Home() {
         <div className="header_hero d-flex align-items-center justify-content-between">
           {/* header */}
           <h3 className="logo">Reciepto</h3>
-          <button className="btn btn-primary" onClick={()=> setShow(true)}>Register</button>
+          <p></p>
+          {/* <button className="btn btn-primary" onClick={()=> setShow(true)}>Register</button> */}
         </div>
         <div className="text-container">
           <h1>Automatic Receipt Generating System </h1>
           <p>
             A case study of National Association of Computer Science
           </p>
-          <button className="btn btn-primary"  onClick={()=> setShow(true)}>Join Now</button>
+          <button className="btn btn-primary"  onClick={()=> setShow(true)}>Register</button>
         </div>
       </div>
       {/* end of hero */}
